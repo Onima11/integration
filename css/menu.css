@@ -10,6 +10,7 @@ nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    background-color: #2ECC71;
 }
 
 nav li {
@@ -28,26 +29,35 @@ nav > ul > li {
 }
 
 nav > ul ul {
+    background: #239855;
+}
+
+nav ul > li > ul {
     display: none;
     position: absolute;
+    top:0;
+    left: 100%;
+}
+
+/* Premier niveau seulement */
+
+nav > ul > li > ul {
     top:100%;
     left: 0;
 }
 
-nav > ul ul a {
-    background: #239855;
-}
+/* FIN Premier niveau seulement */
 
-nav li:hover ul {
+nav ul > li:hover > ul {
     display: block;
 }
+
 
 /* liens */
 
 nav a {
     display: block;
     padding: .5em 1em;
-    background-color: #2ECC71;
     color: #fff;
     text-decoration: none;
     -webkit-transition: background-color .2s ease-in-out;
