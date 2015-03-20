@@ -200,6 +200,7 @@ nav a {
 nav a::before {
     background: #74D0FF;
     content: attr(title);
+    padding: 0.4em 0;
     position: absolute;
     -webkit-transform-origin: center;
     -ms-transform-origin: center;
@@ -216,7 +217,10 @@ nav a::before {
 nav a::after {
     background: #1f317c;
     content: attr(title);
+    padding: 0.4em 0;
     position: absolute;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
     -webkit-transform-origin: center;
     -ms-transform-origin: center;
     transform-origin: center;
@@ -231,8 +235,8 @@ nav a::after {
 
 nav a:hover::after,
 nav a:focus::after {
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
     z-index: 0;
     unicode-bidi: bidi-override;
 }
