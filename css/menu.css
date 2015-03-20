@@ -12,6 +12,12 @@ nav ul {
     list-style: none;
 }
 
+nav li {
+    position: relative;
+}
+
+/* premier niveau */
+
 nav > ul {
   display: table;
   margin: 0 auto;
@@ -19,6 +25,18 @@ nav > ul {
 
 nav > ul > li {
   display: table-cell;
+}
+
+nav > ul ul {
+    display: none;
+    position: absolute;
+    top:100%;
+    left: 0;
+    right: 0;
+}
+
+nav li:hover ul {
+    display: block;
 }
 
 nav a {
