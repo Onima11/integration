@@ -1,0 +1,405 @@
+@font-face {
+    font-family: leaguegothic;
+    src: url('../font/leaguegothic-regular-webfont.ttf');
+}
+
+/** {outline: 1px solid red;}*/
+
+body {
+    background: #F7F7F7;
+    font-family: 'Droid Sans', sans-serif;
+    margin: 0 auto;
+}
+
+main, header {
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+p {
+    margin: 2em 0;
+}
+
+/**** HEADER ****/
+
+h1 {
+    color: #74D0FF;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+h1::before {
+	color: #fff;
+    content: "\2601";
+    display: block;
+	font-size: 160px;
+	line-height: 160px;
+	text-shadow: 0 1px 0 #ccc,
+				 0 2px 0 #c9c9c9,
+				 0 3px 0 #bbb,
+				 0 4px 0 #b9b9b9,
+				 0 5px 0 #aaa,
+				 0 6px 1px rgba(0,0,0,.1),
+				 0 0 5px rgba(0,0,0,.1),
+				 0 1px 3px rgba(0,0,0,.3),
+				 0 3px 5px rgba(0,0,0,.2),
+				 0 5px 10px rgba(0,0,0,.25),
+				 0 10px 10px rgba(0,0,0,.2),
+				 0 20px 20px rgba(0,0,0,.15);
+}
+
+h1 strong {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: .75em;
+    font-weight: lighter;
+    left: 33px;
+    position: relative;
+}
+
+h1 strong em {
+    font-size: 3em;
+    font-style: normal;
+    left: -170px;
+    position: absolute;
+    top: -30px;
+}
+
+nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+/** NAV STYLE 1
+nav a {
+    background: #74D0FF;
+    color: #fff;
+    flex-basis: 30.5%;
+    -webkit-flex-basis: 30.5%;
+    -ms-flex-preferred-size: 30.5%;
+    font-size: 1.3em;
+    padding: .6em 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav a::before,
+nav a::after {
+    content: "";
+    position: absolute;
+    top:0;
+    bottom:0;
+    background-color: rgba(37, 111, 69, 0.5);
+    -webkit-transition: all ease-out 200ms;
+    transition: all ease-out 200ms;
+    z-index: 0;
+}
+
+nav a::before {
+    left: 0;
+    right: 100%;
+}
+
+nav a::after {
+    left:100%;
+    right:0;
+}
+
+nav a:focus::before,
+nav a:hover::before {
+    right: 0;
+}
+
+nav a:focus::after,
+nav a:hover::after {
+    left: 0;
+}
+
+nav a span {
+    position: relative;
+    z-index:1; 
+}
+FIN STYLE 1**/
+
+/** NAV STYLE 2
+nav a {
+    color: #fff;
+    flex-basis: 30.5%;
+    -webkit-flex-basis: 30.5%;
+    -ms-flex-preferred-size: 30.5%;
+    font-size: 1.3em;
+    padding: .6em 0;
+    -webkit-perspective: 150px;
+    perspective: 150px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: color ease-out 200ms;
+    transition: color ease-out 200ms;
+}
+
+nav a::after {
+    background: #74D0FF;
+    content: "";
+    position: absolute;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-transition: all ease-out 200ms;
+    transition: all ease-out 200ms;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index: -1;
+}
+
+nav a:hover::after,
+nav a:focus::after {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+nav a:hover,
+nav a:focus {
+    color: #000;
+}
+
+/**FIN STYLE 2**/
+
+/** NAV STYLE 3 **/
+nav a {
+    color: #fff;
+    vertical-align: middle;
+    flex-basis: 30.5%;
+    -webkit-flex-basis: 30.5%;
+    -ms-flex-preferred-size: 30.5%;
+    font-size: 1.3em;
+    padding: 1em 0;
+    -webkit-perspective: 150px;
+    perspective: 150px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: color ease-out 400ms;
+    transition: color ease-out 400ms;
+}
+
+nav a::before {
+    background: #74D0FF;
+    content: attr(title);
+    position: absolute;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-transition: all ease-out 400ms;
+    transition: all ease-out 400ms;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index: 0;
+}
+
+nav a::after {
+    background: #1f317c;
+    content: attr(title);
+    position: absolute;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-transition: all ease-out 400ms;
+    transition: all ease-out 400ms;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index: -1;
+}
+
+nav a:hover::after,
+nav a:focus::after {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    z-index: 0;
+    unicode-bidi: bidi-override;
+}
+
+nav a:hover::before,
+nav a:focus::before {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+/**FIN STYLE 3**/
+
+/**** MAIN ****/
+
+h2 {
+    font-family: leaguegothic;
+    font-size: 3.5em;
+    font-weight: normal;
+    margin: 1.5em 0 .5em;
+}
+
+blockquote {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: italic;
+}
+
+blockquote::before {
+    content: "\00AB";
+}
+
+blockquote::after {
+    content: "\00BB";
+}
+
+article strong {
+    color: #2CA6E5;
+}
+
+abbr {
+    border-bottom: 1px dashed #000;
+    cursor: help;
+}
+
+article h2 {
+    color: #74D0FF;
+    text-shadow: #000 0 -1px 1px;
+}
+
+code, pre {
+    background: #FFF;
+    border: 1px solid #2ca6e5;
+    border-radius: 0.1em;
+    padding: 0 0.3em;
+}
+
+pre {
+    border-radius: 0.5em;
+    box-shadow: 0 0 1em 0 #74D0FF;
+    opacity: .1;
+    overflow: auto;
+    padding: 1em 1.5em 2.5em;
+    -webkit-transition: opacity ease .5s;
+    transition: opacity ease .5s;
+}
+
+article:nth-child(2) h2:target~pre,
+pre:hover,
+pre:focus {
+    opacity: 1;
+    -webkit-transition: opacity ease .5s;
+    transition: opacity ease .5s;
+}
+
+pre~p>a {
+    color: #07b66a;
+}
+
+article:last-child {
+    text-align: center;
+}
+
+article:last-child h2,
+article:last-child p {
+    text-align: left;
+}
+
+article:last-child header~a {
+    background-color: #FFC843;
+    color: #fff;
+    display: inline-block;
+    font-size: 3em;
+    font-family: leaguegothic;
+    margin: 1.5em auto 2.5em;
+    padding: .3em .5em;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: background-color ease-in-out .3s,
+                        -webkit-transform ease-in-out .3s;
+    transition: background-color ease-in-out .3s,
+                transform ease-in-out .3s;
+    /*width: 50%;*/
+}
+
+article:last-child header~a::before{
+    content: "\27B2";
+    display: inline-block;
+    font-size: 1.5em;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transition: -webkit-transform ease-in-out .3s,
+                        font-size ease-in-out .3s;
+    transition: transform ease-in-out .3s,
+                font-size ease-in-out .3s;
+}
+
+article:last-child header~a:hover,
+article:last-child header~a:focus {
+    background-color: #FF9401;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: background-color ease-in-out .3s,
+                        -webkit-transform ease-in-out .3s;
+    transition: background-color ease-in-out .3s,
+                transform ease-in-out .3s;
+}
+
+article:last-child header~a:hover::before,
+article:last-child header~a:focus::before {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: -webkit-transform ease-in-out .3s;
+    transition: transform ease-in-out .3s;
+}
+
+/**** FOOTER ****/
+
+footer {
+    background: #74D0FF;
+    color: #FFF;
+    padding: 0;
+}
+
+footer div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin: 0 auto;
+    max-width: 620px;
+    padding-bottom: 5%;
+}
+
+section {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+}
+
+section p a {
+    color: #fff;
+    text-decoration: none;
+}
